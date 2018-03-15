@@ -1,0 +1,83 @@
+<ion-content class="transparent-header">
+
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
+  <div id="content">
+    <div id="profile-info" padding>
+      <img id="profile-image" [src]="user.profileImage">
+      <h3 id="profile-name">{{user.name}}</h3>
+      <p>{{user.location}}</p>
+      <p class="profile-description">{{user.description}}</p>
+      <button ion-button round outline small color="signup" (click)="editProfile()">Edit</button>
+    </div>
+  </div>
+
+  <ion-item-divider>
+    <strong>Settings</strong>
+  </ion-item-divider>
+
+  <ion-list>
+    <button color="item-bg" ion-item>
+      <ion-icon name="md-notifications" color="text" item-start></ion-icon>
+      <ion-label color="text" >New Message Alerts</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni" color="signup" item-end></ion-toggle>
+    </button>
+
+    <button color="item-bg" ion-item>
+      <ion-icon name="md-alarm" color="text" item-start></ion-icon>
+      <ion-label color="text" >Vibration</ion-label>
+      <ion-toggle [(ngModel)]="a" color="signup" item-end></ion-toggle>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button class="dowmbtn" color="item-bg" ion-item (click)="toAboutPage()">
+      <ion-icon name="md-glasses" color="text" item-start></ion-icon>
+      <ion-label color="text" >About</ion-label>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button class="dowmbtn" color="item-bg" (click)="toLogInPage()" ion-item>
+      <ion-icon name="md-exit" color="green-txt" item-start></ion-icon>
+      <ion-label color="green-txt" >Sign Out</ion-label>
+    </button>
+
+    <button class="dowmbtn" color="item-bg" ion-item>
+      <ion-icon name="md-flash" color="danger" item-start></ion-icon>
+      <ion-label color="danger">Disconnect Partner</ion-label>
+    </button>
+  </ion-list>
+
+</ion-content>
+
+<ion-fab class="addbtn" center bottom>
+  <button navPush="AddMsgPage" ion-fab color="login">
+    <img src="assets/img/addbtn.png">
+  </button>
+</ion-fab>
+
+<ion-footer no-border class="footer">
+  <ion-toolbar color="main">
+
+    <ion-row text-center>
+      <ion-col col-5>
+        <button icon-left clear ion-button color="light" (click)="toHomePage()">
+          <ion-icon color="light" name="ios-cube-outline"></ion-icon>
+            Lovebox
+        </button>
+      </ion-col>
+
+      <ion-col col-2>
+
+      </ion-col>
+
+      <ion-col col-5>
+        <button icon-left clear ion-button color="light">
+          <ion-icon color="light" name="ios-person"></ion-icon>
+            Me
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-toolbar>
+</ion-footer>

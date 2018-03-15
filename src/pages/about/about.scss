@@ -1,3 +1,42 @@
 page-about {
-
+  ion-content {
+    background: color($colors, sec-main)!important;
+    background-color: color($colors, sec-main)!important;
+    text-align: center;
+    h2,
+    p,
+    span {
+      color: color($colors, text-grey) !important;
+    }
+  }
+  ion-icon {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+  }
+  ion-list {
+    h2,
+    p,
+    span {
+      color: color($colors, text) !important;
+    }
+  }
+  #logo-part {
+    text-align: center;
+    margin: 30px auto;
+    p {
+      color: color($colors, text-grey);
+      font-size: 1.3em;
+    }
+  }
+  p {
+    color: color($colors, text)
+  }
+  .copyright {
+    p {
+      font-size: 0.8em;
+      color: color($colors, text-grey)
+    }
+  }
 }
+

@@ -1,0 +1,23 @@
+page-intro {
+
+  ion-slide {
+    background-color: color($colors, sec-main);
+  }
+
+  ion-navbar,
+  ion-header {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  h2 {
+    color: #797979;
+    font-size: 1.2em;
+  }
+
+  p {
+    color: #999999;
+    font-size: 0.8em;
+    margin: 3px auto;
+  }
+}

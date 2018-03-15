@@ -1,11 +1,48 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="main">
     <ion-title>
       About
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div id="logo-part">
+    <img id="logo-img" width="28%" src="assets/img/circle-logo.png">
+    <p>Lovebox 1.0</p>
+  </div>
+
+  <ion-list>
+    <ion-item color="item-bg">
+      <ion-avatar item-start>
+        <img src="assets/img/mengfei.jpg">
+      </ion-avatar>
+      <h2>Mengfei Liu</h2>
+      <p>Designer</p>
+    </ion-item>
+    <ion-item color="item-bg">
+      <ion-avatar item-start>
+        <img src="assets/img/zhangxu.jpg">
+      </ion-avatar>
+      <h2>Xu Zhang</h2>
+      <p>Developer</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+  <button ion-item icon-start (click)="openBlog()" color="item-bg">
+  <ion-icon color="main" name="logo-wordpress"></ion-icon>
+    <span>Our Final Project Blog</span>
+  </button>
+  </ion-list>
+
+  <ion-footer no-border>
+    <ion-toolbar class="footer" color="sec-main">
+      <div class="copyright">
+        <p>Copyright © 2017 Lovebox Team.</p>
+        <p>All Rights Reserved.</p>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
 
 </ion-content>

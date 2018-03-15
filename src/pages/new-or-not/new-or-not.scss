@@ -1,0 +1,40 @@
+page-new-or-not {
+  
+  height: 100%;
+  
+  #logo-part {
+    background-color: #f47672;
+    height: 80%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    h2 {
+      color: white;
+    }
+  }
+
+  #logo-img {
+    display: block
+  }
+  #button-part {
+    background-color: #FABBB0;
+    height: 20%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    .btn {
+      text-transform: none;
+      border-radius: 3px !important;
+      box-shadow: none;
+    }
+  }
+
+
+}

@@ -1,3 +1,70 @@
 page-home {
 
+  ion-content {
+    background-color: color($colors, sec-main) !important;
+  }
+
+  ion-card {
+    background-color: #fffbfb !important;
+
+      span{
+        color: color($colors, text) !important;
+        font-size: 11px !important;
+      }
+
+      .showspan {
+        float: left;
+        margin-left: -12px;
+        margin-top: 7px
+      }
+
+      .hiddenspan {
+        float: left;
+        margin-left: -12px;
+        margin-top: 7px;
+        display:none;
+      }
+
+      .hidden-text-overflow {
+        font-family: Arial;
+        color: color($colors, titles);
+        font-size: 1em;
+        width:12em; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;overflow:hidden;
+      }
+
+      hr {
+        margin-top: 0.3em;
+        margin-bottom: 0.4em; 
+      }
+
+      h5 {
+        margin-top: -15px !important;
+        color: color($colors, text);
+        font-size: 11px !important;
+        text-align: center;
+        font-weight: bold !important;
+        color: color($colors, text) !important;
+      }
+  }
+
+  .env-icon {
+    display: block;
+    margin-top: -40px !important;
+  }
+
+  .addbtn {
+    margin-bottom: 0px !important;
+  }
+
+  ion-footer {
+    ion-icon {
+      font-size: 26px !important
+    }
+  }
+
+  .button-md {
+    font-size: 1.2rem;
+    text-transform: none;
+  }
+
 }
