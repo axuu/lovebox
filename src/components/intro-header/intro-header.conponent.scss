@@ -1,0 +1,21 @@
+/* header */
+.header-left {
+	display: flex;
+	align-items: center;
+	img {
+		height: 30px;
+		width: auto;
+		margin-right: 5px;
+	}
+	span {
+		font-size: 1.2em;
+		color: #f36b67;
+		font-weight: bold;
+	}
+}
+
+.skip {
+	line-height: 30px;
+	color: color($colors, main);
+	font-size: 1em;
+}
