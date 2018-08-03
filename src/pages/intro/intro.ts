@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewOrNotPage } from "../new-or-not/new-or-not";
 import { introSlide } from '../../model/introslide';
+import { IntroHeader } from './intro-header/intro-header.component';
 
 @IonicPage()
 @Component({

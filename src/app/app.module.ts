@@ -38,7 +38,6 @@ import { HomeService } from "../pages/home/home.service";
     MyApp,
     AboutPage,
     HomePage,
-    IntroPage,
     NewOrNotPage,
     LogInPage,
     SignUpPage,
@@ -49,20 +48,20 @@ import { HomeService } from "../pages/home/home.service";
     EditProfilePage,
     AnswerQuestionPage,
     MsgContentPage,
-    SetQuestionPage
+	SetQuestionPage,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule,
-    IonicModule.forRoot(MyApp),
+	IonicModule.forRoot(MyApp),
+	IntroPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
     HomePage,
-    IntroPage,
     NewOrNotPage,
     LogInPage,
     SignUpPage,
@@ -73,7 +72,7 @@ import { HomeService } from "../pages/home/home.service";
     EditProfilePage,
     AnswerQuestionPage,
     MsgContentPage,
-    SetQuestionPage
+	SetQuestionPage,
   ],
   providers: [
     StatusBar,
