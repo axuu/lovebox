@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewOrNotPage } from "../new-or-not/new-or-not";
 import { IntroSlideService } from "./intro.service"

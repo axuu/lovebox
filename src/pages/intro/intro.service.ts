@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { introSlide } from '../../model/introslide';
 
-@Injectable({
-	providedIn: 'page-intro',
-})
+@Injectable()
 export class IntroSlideService {
 
 	constructor() {}
