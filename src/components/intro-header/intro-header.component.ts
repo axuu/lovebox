@@ -9,4 +9,8 @@ export class IntroHeaderComponent {
 
 	constructor() {}
 
+	toNeworNotPage() {
+		this.navCtrl.push(NewOrNotPage);
+	}
+
 }

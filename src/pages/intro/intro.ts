@@ -10,17 +10,19 @@ import { IntroSlideService } from "./intro.service"
 })
 export class IntroPage implements OnInit {
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, private IntroSlideService: IntroSlideService)	{
+	constructor (
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		private IntroSlideService: IntroSlideService
+	){
+
 	}
 
-	slides;
-
-	toNeworNotPage() {
-		this.navCtrl.push(NewOrNotPage);
-	}
+	// Data
+	slides; // slides of intro page
 
 	ionViewDidLoad() {
-		console.log('ionViewDidLoad IntroPage');
+		// console.log('ionViewDidLoad IntroPage');
 	}
 
 	getSlides(): void {
