@@ -26,7 +26,8 @@ export class IntroPage implements OnInit {
 	}
 
 	getSlides(): void {
-		this.slides = this.IntroSlideService.getSlides();
+		this.IntroSlideService.getSlides()
+			.subscribe(slides => this.slides = slides);
 	}
 
 	ngOnInit() {
