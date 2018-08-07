@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 // angular module
 import { RouterModule } from '@angular/router';
 import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 
 // page
@@ -61,6 +62,7 @@ import { HomeService } from "../pages/home/home.service";
 	imports: [
 		BrowserModule,
 		HttpModule,
+		HttpClientModule,
 		RouterModule,
 		IonicModule.forRoot(MyApp),
 		IntroPageModule,
