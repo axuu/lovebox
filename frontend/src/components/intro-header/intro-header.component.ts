@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { NewOrNotPage } from "../new-or-not/new-or-not";
+import { NewOrNotPage } from "../../pages/new-or-not/new-or-not";
 import { IonicPage, NavController } from 'ionic-angular';
 
 
@@ -15,9 +15,8 @@ export class IntroHeaderComponent {
 
 	}
 
-	toNeworNotPage() {
-		console.log('11')
-		this.navCtrl.pop();
+	clickSkip(): void {
+		this.navCtrl.push(NewOrNotPage)
 	}
 
 }
