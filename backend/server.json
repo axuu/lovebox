@@ -1,0 +1,16 @@
+{
+	"introslides": [
+		{
+			"title": "Treasure your love moments",
+			"subtitle": "Easily edit and store your love messages in a digital love box.",
+			"imgUrl": "assets/img/intro1.png",
+			"isShowBtn": false
+		},
+		{
+			"title": "Know more about him/her",
+			"subtitle": "Each message should be “locked” with a question and the question need to be answered before reading the message.",
+			"imgUrl": "assets/img/intro2.png",
+			"isShowBtn": true
+		}
+	]
+}
