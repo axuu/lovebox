@@ -35,7 +35,7 @@ export class IntroPage implements OnInit {
 			.subscribe(slides => {
 				if (slides.length === 0) {
 					// no slides got
-					this.navCtrl.push(NewOrNotPage)
+					this.navCtrl.setRoot(NewOrNotPage)
 				} else {
 					this.slides = slides
 				}
