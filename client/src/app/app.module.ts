@@ -25,7 +25,6 @@ import { UserPage } from "../pages/user/user";
 
 // page module
 import { IntroPageModule } from '../pages/intro/intro.module';
-import { AppRoutingModule } from '../router/router';
 
 // ionic-native
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -67,7 +66,6 @@ import { HomeService } from "../pages/home/home.service";
 		RouterModule,
 		IonicModule.forRoot(MyApp),
 		IntroPageModule,
-		AppRoutingModule,
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
