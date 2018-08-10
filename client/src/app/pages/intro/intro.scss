@@ -1,8 +1,9 @@
-page-intro {
+ion-slides {
+	height: 100%;
 
 	/* slide */
 	ion-slide {
-		background-color: color($colors, sec-main);
+		// background-color: color($colors, sec-main);
 
 		.top {
 			width: 100%;
@@ -36,3 +37,6 @@ page-intro {
 	}
 
 }
+
+
+
