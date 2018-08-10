@@ -5,69 +5,68 @@ import { FillEmailPage } from "../fill-email/fill-email";
 import { User } from '../../model/user';
 import { UserRegisterService } from './sign-up.service';
 import { FormsModule } from "@angular/forms";
+import { ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-sign-up',
-  templateUrl: 'sign-up.html',
+	selector: 'page-sign-up',
+	templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
 
-  public user:User = new User();
+	public user: User = new User();
 
-  constructor(private navCtrl: NavController, 
-              public loadingCtrl: LoadingController,
-              public alertCtrl: AlertController, 
-              public app: App, 
-              public userRegisterService: UserRegisterService,) {
-  }
+	constructor(
+		private navCtrl: NavController,
+		public loadingCtrl: LoadingController,
+		public alertCtrl: AlertController,
+		public app: App,
+		public userRegisterService: UserRegisterService,
+		private toastCtrl: ToastController,
+	) {
 
-  toFillEmail() {
-      let alert = this.alertCtrl.create({
-        title: 'Sign up successful!',
-        subTitle: '',
-        buttons: [
-          {
-            text: 'OK',
-            handler: data => {
-               this.navCtrl.push(FillEmailPage);
-            }
-          }
-        ]
-      });
-      alert.present();
-  }
+	}
 
-  toLogInPage() {
-      this.navCtrl.push(LogInPage);
-  }
+	// TODO: extract Toast as a component
+	toFillEmail() {
+		let toast = this.toastCtrl.create({
+			message: 'Sign up successfully',
+			duration: 3000,
+			position: 'middle',
+		});
+		toast.present();
+	}
 
-  // doRegister() {
+	toLogInPage() {
+		this.navCtrl.push(LogInPage);
+	}
 
-  //   this.userRegisterService.register(this.user)
-  //     .subscribe(
-  //     data => {
-  //       console.log(data);
-  //     },
-  //     error => {
-  //       console.error(error);
-  //     }
-  //     )
-  //   console.log(this.user);
+	// doRegister() {
 
-  // }
+	//   this.userRegisterService.register(this.user)
+	//     .subscribe(
+	//     data => {
+	//       console.log(data);
+	//     },
+	//     error => {
+	//       console.error(error);
+	//     }
+	//     )
+	//   console.log(this.user);
 
-  // testEmail() {
-  //   let email = this.userForm.get("email").value;
-  //   this.userRegisterService.testEmail(email)
-  //     .subscribe(
-  //       data => {
-  //         console.log(data);
-  //       },
-  //       error => {
-  //         console.error(error);
-  //       }
-  //     )
-  // }
-  
+	// }
+
+	// testEmail() {
+	//   let email = this.userForm.get("email").value;
+	//   this.userRegisterService.testEmail(email)
+	//     .subscribe(
+	//       data => {
+	//         console.log(data);
+	//       },
+	//       error => {
+	//         console.error(error);
+	//       }
+	//     )
+	// }
+
 }
