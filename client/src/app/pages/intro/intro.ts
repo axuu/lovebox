@@ -24,20 +24,27 @@ export class IntroPage implements OnInit {
 			"title": "Treasure your love moments",
 			"subtitle": "Easily edit and store your love messages in a digital love box.",
 			"imgSrc": "/assets/img/intro1.png",
-			"isShowBtn": false
 		},
 		{
 			"title": "Know more about him/her",
 			"subtitle": "Each message should be “locked” with a question and the question need to be answered before reading the message.",
 			"imgSrc": "/assets/img/intro2.png",
-			"isShowBtn": true
 		}
 	]
 	// slides of intro page
 
+	// add button and skip to the last slide
+	addStartBtn(arr):void {
+		for(let i = 0; i < arr.length; i++){
+			arr.isShowBtn = false
+		}
+		arr[arr.length - 1].isShowBtn = true
+	}
+
 	// life circle methodes
 	ngOnInit() {
 		// this.getSlides()
+		this.addStartBtn(this.slides)
 	}
 
 	ionViewDidLoad() {

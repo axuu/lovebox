@@ -1,9 +1,11 @@
 ion-slides {
+
 	height: 100%;
 
 	/* slide */
 	ion-slide {
 		// background-color: color($colors, sec-main);
+		background-color: #FAECE6;
 
 		.top {
 			width: 100%;
@@ -14,6 +16,10 @@ ion-slides {
 			position: absolute;
 			top: 0;
 			padding-top: 44px;
+			img {
+				width: 60%;
+				margin: 25px auto;
+			}
 		}
 
 		.bottom {

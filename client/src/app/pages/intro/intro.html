@@ -3,10 +3,10 @@
 <ion-content>
 	<ion-slides pager="true">
 
-		<ion-slide *ngFor="let slide of slides">
+		<ion-slide *ngFor="let slide of slides; let i=index">
 
 			<div class="top">
-				<img style="width:60%; margin:25px auto" src="{{slide.imgSrc}}">
+				<img src="{{slide.imgSrc}}">
 			</div>
 			<div class="bottom">
 				<h2>
@@ -15,7 +15,7 @@
 				<div class="">
 					<p padding>{{slide.subtitle}}</p>
 				</div>
-				<ion-button *ngIf="slide.isShowBtn" round icon-end color="main" (click)="toNeworNotPage()">Get Started</ion-button>
+				<ion-button *ngIf="slide.isShowBtn" shape="round" color="main" href="home">Get Started</ion-button>
 			</div>
 
 		</ion-slide>

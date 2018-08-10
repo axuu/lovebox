@@ -3,6 +3,5 @@ export class IntroSlide {
 		public title: string,
 		public subtitle: string,
 		public imgSrc: string,
-		public isShowBtn: boolean,
 	) { }
 }
