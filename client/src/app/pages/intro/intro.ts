@@ -19,6 +19,7 @@ export class IntroPage implements OnInit {
 	}
 
 	// Data
+	// slides of intro page
 	slides = [
 		{
 			"title": "Treasure your love moments",
@@ -31,7 +32,6 @@ export class IntroPage implements OnInit {
 			"imgSrc": "/assets/img/intro2.png",
 		}
 	]
-	// slides of intro page
 
 	// add button and skip to the last slide
 	addStartBtn(arr):void {
@@ -47,20 +47,16 @@ export class IntroPage implements OnInit {
 		this.addStartBtn(this.slides)
 	}
 
-	ionViewDidLoad() {
-		// console.log('ionViewDidLoad IntroPage');
+	getSlides(): void {
+		this.IntroSlideService.getSlides()
+			.subscribe(slides => {
+				if (slides.length === 0) {
+					// no slides got
+					// this.navCtrl.setRoot(NewOrNotPage)
+				} else {
+					this.slides = slides
+				}
+			});
 	}
-
-	// getSlides(): void {
-	// 	this.IntroSlideService.getSlides()
-	// 		.subscribe(slides => {
-	// 			if (slides.length === 0) {
-	// 				// no slides got
-	// 				// this.navCtrl.setRoot(NewOrNotPage)
-	// 			} else {
-	// 				this.slides = slides
-	// 			}
-	// 		});
-	// }
 
 }
