@@ -1,22 +1,15 @@
-import { Component } from '@angular/core';
-// import { NewOrNotPage } from "../../pages/new-or-not/new-or-not";
-import { NavController } from '@ionic/angular';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'intro-header',
-	templateUrl: './intro-header.component.html',
+  selector: 'intro-header',
+  templateUrl: './intro-header.component.html',
+  styleUrls: ['./intro-header.component.scss']
 })
-export class IntroHeaderComponent {
+export class IntroHeaderComponent implements OnInit {
 
-	constructor(
-		public navCtrl: NavController,
-	) {
+  constructor() { }
 
-	}
-
-	clickSkip(): void {
-		//this.navCtrl.push(NewOrNotPage)
-	}
+  ngOnInit() {
+  }
 
 }
