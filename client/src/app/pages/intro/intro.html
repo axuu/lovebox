@@ -1,7 +1,7 @@
 <intro-header></intro-header>
 
 <ion-content>
-	<ion-slides pager="true">
+	<ion-slides pager="true" scrollbar="false">
 
 		<ion-slide *ngFor="let slide of slides; let i=index">
 
@@ -15,7 +15,7 @@
 				<div class="">
 					<p padding>{{slide.subtitle}}</p>
 				</div>
-				<ion-button *ngIf="slide.isShowBtn" shape="round" color="main" href="home">Get Started</ion-button>
+				<ion-button color="success" *ngIf="slide.isShowBtn" shape="round" href="welcome">Get Started</ion-button>
 			</div>
 
 		</ion-slide>

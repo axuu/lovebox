@@ -34,9 +34,6 @@ export class IntroPage implements OnInit {
 
 	// add button and skip to the last slide
 	addStartBtn(arr):void {
-		for(let i = 0; i < arr.length; i++){
-			arr.isShowBtn = false
-		}
 		arr[arr.length - 1].isShowBtn = true
 	}
 
