@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule, NavController, NavParams } from '@ionic/angular';
+import { IonicModule, NavParams } from '@ionic/angular';
 // import { NewOrNotPage } from "../new-or-not/new-or-not";
 import { IntroSlideService } from "./intro.service"
 
@@ -11,7 +11,6 @@ import { IntroSlideService } from "./intro.service"
 export class IntroPage implements OnInit {
 
 	constructor (
-		// public navCtrl: NavController,
 		// public navParams: NavParams,
 		private IntroSlideService: IntroSlideService
 	){
