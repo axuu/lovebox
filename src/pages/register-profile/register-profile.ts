@@ -25,7 +25,6 @@ export class RegisterProfilePage {
 
     this.datePicker.onDateSelected.subscribe(
       (date) => {
-        console.log(date);
         this.selectedDate = date;
     });
 
