@@ -1,23 +1,46 @@
 page-intro {
 
-  ion-slide {
-    background-color: color($colors, sec-main);
-  }
+	ion-slide {
+		background-color: color($colors, sec-main);
+		h2 {
+			color: #797979;
+			font-size: 1.2em;
+		}
 
-  ion-navbar,
-  ion-header {
-    background: transparent !important;
-    background-color: transparent !important;
-  }
+		p {
+			color: #999999;
+			font-size: 0.8em;
+			margin: 3px auto;
+		}
+	}
 
-  h2 {
-    color: #797979;
-    font-size: 1.2em;
-  }
+	.fake-header {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 20px 0 20px;
+		.header-left {
+			display: flex;
+			align-items: center;
+			img {
+				height: 30px;
+				width: auto;
+				margin-right: 5px;
+			}
+			span {
+				color: #f36b67;
+				font-weight: bold;
+			}
+		}
 
-  p {
-    color: #999999;
-    font-size: 0.8em;
-    margin: 3px auto;
-  }
+		.skip {
+			color: color($colors, main);
+			font-size: 16px;
+		}
+	}
+
 }

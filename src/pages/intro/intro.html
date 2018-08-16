@@ -1,31 +1,44 @@
-<ion-slides pager>
+<ion-content>
+	<ion-slides pager>
 
-  <ion-slide class="transparent-header">
-    <ion-header>
-      <ion-navbar padding>
-        <img float-left style="width:30%; margin-top:10px; margin-left: 10px" src="assets/img/logo-left-corner.png">
-        <button (click)="toNeworNotPage()" float-right ion-button clear color="main">SKIP</button>
-      </ion-navbar>
-    </ion-header>
-    <img style="width:60%; margin:25px auto" src="assets/img/intro1.png">
-    <h2><strong>Treasure your love moments</strong></h2>
-    <div class="">
-      <p padding>Easily edit and store your love messages in a digital love box. </p>
-    </div>
-  </ion-slide>
+		<ion-slide class="transparent-header">
 
-  <ion-slide class="transparent-header">
-    <ion-header>
-      <ion-navbar padding>
-        <img float-left style="width:30%; margin-top:10px; margin-left: 10px" src="assets/img/logo-left-corner.png">
-      </ion-navbar>
-    </ion-header>
-    <img style="width:60%; margin-top:30px" src="assets/img/intro2.png">
-    <h2><strong>Know more about him/her</strong></h2>
-    <p padding>Each message should be “locked” with a question and the question need to be answered before reading the message. </p>
-    <button ion-button round icon-end color="main" (click)="toNeworNotPage()">
-        Get Started
-    </button>
-  </ion-slide>
+			<div class="fake-header">
+				<div class="header-left">
+					<img src="assets/img/circle-logo.png">
+					<span>Lovebox</span>
+				</div>
+				<div class="skip" color="main">SKIP</div>
+			</div>
 
-</ion-slides>
+			<img style="width:60%; margin:25px auto" src="assets/img/intro1.png">
+			<h2>
+				<strong>Treasure your love moments</strong>
+			</h2>
+			<div class="">
+				<p padding>Easily edit and store your love messages in a digital love box. </p>
+			</div>
+		</ion-slide>
+
+		<ion-slide class="transparent-header">
+
+			<div class="fake-header">
+				<div class="header-left">
+					<img src="assets/img/circle-logo.png">
+					<span>Lovebox</span>
+				</div>
+				<div class="skip" color="main">SKIP</div>
+			</div>
+
+			<img style="width:60%; margin-top:30px" src="assets/img/intro2.png">
+			<h2>
+				<strong>Know more about him/her</strong>
+			</h2>
+			<p padding>Each message should be “locked” with a question and the question need to be answered before reading the message. </p>
+			<button ion-button round icon-end color="main" (click)="toNeworNotPage()">
+				Get Started
+			</button>
+		</ion-slide>
+
+	</ion-slides>
+</ion-content>
