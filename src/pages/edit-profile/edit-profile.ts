@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, Platform, LoadingController } from 'ionic-angular';
 import { LogInPage } from "../log-in/log-in";
 import { SendEmailPage } from "../send-email/send-email";
-import { DatePicker } from "../../components/ionic2-date-picker/index";
 import { CameraProvider } from "../../providers/util/camera.provider";
 import { UserPage } from "../user/user";
 
@@ -11,7 +10,6 @@ import { UserPage } from "../user/user";
 @Component({
   selector: 'page-edit-profile',
   templateUrl: 'edit-profile.html',
-  providers: [ DatePicker ]
 })
 export class EditProfilePage {
 
@@ -21,14 +19,8 @@ export class EditProfilePage {
 
   profilename:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public datePicker: DatePicker, public actionsheetCtrl: ActionSheetController,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public actionsheetCtrl: ActionSheetController,
     public cameraProvider: CameraProvider, public platform: Platform, public loadingCtrl: LoadingController) {
-
-    this.datePicker.onDateSelected.subscribe(
-      (date) => {
-        console.log(date);
-        this.selectedDate = date;
-    });
 
   }
 
@@ -56,10 +48,6 @@ export class EditProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterProfilePage');
-  }
-
-  showCalendar(){
-    this.datePicker.showCalendar();
   }
 
   changePicture() {

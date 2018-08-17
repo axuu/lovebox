@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
@@ -17,17 +17,14 @@ import { SignUpPage } from "../pages/sign-up/sign-up";
 import { FillEmailPage } from "../pages/fill-email/fill-email";
 import { SendEmailPage } from "../pages/send-email/send-email";
 import { RegisterProfilePage } from "../pages/register-profile/register-profile";
-import { DatePicker } from "../components/ionic2-date-picker/date-picker";
 
 import { Camera } from "@ionic-native/camera";
 import { CameraProvider } from "../providers/util/camera.provider";
 import { UserPage } from "../pages/user/user";
 import { ToastService } from "../providers/util/toast.service";
 import { EditProfilePage } from "../pages/edit-profile/edit-profile";
-//import { AddMsgPage } from "../pages/add-msg/add-msg";
 
 import { HttpModule } from "@angular/http";
-import { RelativeTime } from "../pipes/relative-time";
 import { AnswerQuestionPage } from "../pages/answer-question/answer-question";
 import { MsgContentPage } from "../pages/msg-content/msg-content";
 import { UserRegisterService } from "../pages/sign-up/sign-up.service";
@@ -48,21 +45,17 @@ import { HomeService } from "../pages/home/home.service";
     FillEmailPage,
     SendEmailPage,
     RegisterProfilePage,
-    DatePicker,
     UserPage,
     EditProfilePage,
-    RelativeTime,
     AnswerQuestionPage,
     MsgContentPage,
     SetQuestionPage
-
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule,
     IonicModule.forRoot(MyApp),
-    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -76,13 +69,11 @@ import { HomeService } from "../pages/home/home.service";
     FillEmailPage,
     SendEmailPage,
     RegisterProfilePage,
-    DatePicker,
     UserPage,
     EditProfilePage,
     AnswerQuestionPage,
     MsgContentPage,
     SetQuestionPage
-    
   ],
   providers: [
     StatusBar,
@@ -91,7 +82,6 @@ import { HomeService } from "../pages/home/home.service";
     Camera,
     ToastService,
     InAppBrowser,
-    RelativeTime,
     UserRegisterService,
     UserLoginService,
     SetQuestionService,
