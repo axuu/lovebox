@@ -1,7 +1,5 @@
 {
   "name": "lovebox",
-  "integrations": {
-    "cordova": {}
-  },
+  "app_id": "",
   "type": "ionic-angular"
 }
