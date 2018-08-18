@@ -33,7 +33,7 @@ import { SetQuestionPage } from "../pages/set-question/set-question";
 import { UserLoginService } from "../pages/log-in/log-in.service";
 import { SetQuestionService } from "../pages/set-question/set-question.service";
 import { HomeService } from "../pages/home/home.service";
-// import { IntroHeaderComponent } from '../components/intro-header/intro-header.component';
+import { IntroPageModule } from '../pages/intro/intro.module';
 
 @NgModule({
 	declarations: [
@@ -51,14 +51,13 @@ import { HomeService } from "../pages/home/home.service";
 		AnswerQuestionPage,
 		MsgContentPage,
 		SetQuestionPage,
-		IntroPage,
-		// IntroHeaderComponent,
 	],
 	imports: [
 		BrowserModule,
 		HttpModule,
 		RouterModule,
 		IonicModule.forRoot(MyApp),
+		IntroPageModule,
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
@@ -76,7 +75,6 @@ import { HomeService } from "../pages/home/home.service";
 		AnswerQuestionPage,
 		MsgContentPage,
 		SetQuestionPage,
-		IntroPage,
 		// IntroHeaderComponent,
 	],
 	providers: [
