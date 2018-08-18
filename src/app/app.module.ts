@@ -33,7 +33,7 @@ import { SetQuestionPage } from "../pages/set-question/set-question";
 import { UserLoginService } from "../pages/log-in/log-in.service";
 import { SetQuestionService } from "../pages/set-question/set-question.service";
 import { HomeService } from "../pages/home/home.service";
-import { IntroHeaderComponent } from '../components/intro-header/intro-header.component';
+// import { IntroHeaderComponent } from '../components/intro-header/intro-header.component';
 
 @NgModule({
 	declarations: [
@@ -52,7 +52,7 @@ import { IntroHeaderComponent } from '../components/intro-header/intro-header.co
 		MsgContentPage,
 		SetQuestionPage,
 		IntroPage,
-		IntroHeaderComponent,
+		// IntroHeaderComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -77,7 +77,7 @@ import { IntroHeaderComponent } from '../components/intro-header/intro-header.co
 		MsgContentPage,
 		SetQuestionPage,
 		IntroPage,
-		IntroHeaderComponent,
+		// IntroHeaderComponent,
 	],
 	providers: [
 		StatusBar,
