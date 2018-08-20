@@ -21,6 +21,11 @@ export class IntroPage implements OnInit {
 	// Data
 	slides; // slides of intro page
 
+	// life circle methodes
+	ngOnInit() {
+		this.getSlides()
+	}
+
 	ionViewDidLoad() {
 		// console.log('ionViewDidLoad IntroPage');
 	}
@@ -35,10 +40,6 @@ export class IntroPage implements OnInit {
 					this.slides = slides
 				}
 			});
-	}
-
-	ngOnInit() {
-		this.getSlides()
 	}
 
 }
