@@ -27,11 +27,14 @@ export class IntroPage implements OnInit {
 
 	getSlides(): void {
 		this.IntroSlideService.getSlides()
-			.subscribe(slides => this.slides = slides);
-
-		if (!this.slides) {
-			this.navCtrl.push(NewOrNotPage)
-		}
+			.subscribe(slides => {
+				if (slides.length === 0) {
+					// no slides got
+					this.navCtrl.push(NewOrNotPage)
+				} else {
+					this.slides = slides
+				}
+			});
 	}
 
 	ngOnInit() {
