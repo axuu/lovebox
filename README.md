@@ -4,4 +4,4 @@ Easily edit and store your love messages in a digital love box.
 
 ### Mockup
 
-![https://github.com/zxfred/lovebox/blob/master/mockup.png]()
+![mock up](https://github.com/zxfred/lovebox/raw/master/mockup.png)
