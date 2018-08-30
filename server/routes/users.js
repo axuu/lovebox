@@ -11,8 +11,6 @@ var pool = mysql.createPool(dbConfig.mysql);
 
 // 响应一个JSON数据
 var responseJSON = function (res, ret) {
-	console.log(res)
-	console.log(ret)
 	if (typeof ret === 'undefined') {
 		res.json({
 			code: '-200',
@@ -23,18 +21,20 @@ var responseJSON = function (res, ret) {
 	}
 };
 
-router.get('/what', function(req, res, next) {
-	res.send('hahaha')
-})
+// 添加用户 add user
+router.post('/adduser', function (req, res, next) {
 
-// 添加用户
-router.get('/adduser', function (req, res, next) {
 	// 从连接池获取连接
 	pool.getConnection(function (err, connection) {
+
+		// 错误处理
+		if (err) throw err;
+
 		// 获取前台页面传过来的参数
-		var param = req.query || req.params;
+		// var param = req.query || req.params;
 		// 建立连接 增加一个用户信息
-		connection.query(userSQL.insert, [param.uid, param.name], function (err, result) {
+		connection.query(userSQL.insert, [req.body.username], function (err, result) {
+
 			if (result) {
 				result = {
 					code: 200,
@@ -50,11 +50,6 @@ router.get('/adduser', function (req, res, next) {
 
 		});
 	});
-});
-
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-	res.send('respond with a resource');
 });
 
 module.exports = router;

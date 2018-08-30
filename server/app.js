@@ -23,6 +23,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// 请求体解析 add body parser
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -39,7 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// nodemon
+// nodemon need this
 app.listen(3000);
 
 module.exports = app;
