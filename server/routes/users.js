@@ -11,6 +11,8 @@ var pool = mysql.createPool(dbConfig.mysql);
 
 // 响应一个JSON数据
 var responseJSON = function (res, ret) {
+	console.log(res)
+	console.log(ret)
 	if (typeof ret === 'undefined') {
 		res.json({
 			code: '-200',
@@ -20,6 +22,10 @@ var responseJSON = function (res, ret) {
 		res.json(ret);
 	}
 };
+
+router.get('/what', function(req, res, next) {
+	res.send('hahaha')
+})
 
 // 添加用户
 router.get('/adduser', function (req, res, next) {
@@ -47,8 +53,8 @@ router.get('/adduser', function (req, res, next) {
 });
 
 /* GET users listing. */
-// router.get('/', function (req, res, next) {
-// 	res.send('respond with a resource');
-// });
+router.get('/', function (req, res, next) {
+	res.send('respond with a resource');
+});
 
 module.exports = router;
